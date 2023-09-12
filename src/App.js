@@ -19,24 +19,37 @@ export const listGenres = [
     }
 ]
 
+const onSearch = (inputValue) => {
+    if(inputValue !== undefined && inputValue !== 0){
+        return console.log('El valor ingresado es: '+ inputValue);
+    }
+}
+
+const onSelect = (event, setGenres) => {
+    event.preventDefault();
+    const { target: { value } } = event;
+    setGenres(value);
+};
+
 function App() {
   return (
-    <div className="App">
-        <h2 style={{textAlign: 'left'}}>Epam React Course</h2>
+    <div>
+        <h2 className="initialTitle">Epam React Course</h2>
         <hr/>
         <div>
-            <header style={{textAlign: 'center'}}>Counter component</header>
+            <header className="header">Counter component</header>
             <Counter/>
-        </div><br/><br/><hr/>
+        </div><hr/>
         <div>
-            <header style={{textAlign: 'center'}}>SearchForm component</header><br/><br/>
+            <header className="header">SearchForm component</header>
             <SearchForm
+                initialQuery="test"
+                onSearch={onSearch}
             />
-        </div><br/><br/><hr/>
-        <div style={{width: '50%', display: 'inline-flex', flexDirection: 'column'}}>
-            <header className={'header'}>GenreSelect component</header><br/><br/>
-            <GenreSelect listGenres={listGenres}
-            />
+        </div><hr/>
+        <div className="containerGenre">
+            <header className="header">GenreSelect component</header>
+            <GenreSelect listGenres={listGenres} onSelect={onSelect} initialGenre="Crime" />
         </div><hr/>
     </div>
   );

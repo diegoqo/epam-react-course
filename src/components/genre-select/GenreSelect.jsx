@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './GenreSelect.css';
 import { Checkbox, FormControl, ListItemText, MenuItem, Select } from "@mui/material";
 
@@ -13,17 +13,18 @@ const MenuProps = {
     },
 };
 
-export const GenreSelect = ({listGenres}) => {
+export const GenreSelect = ({listGenres, onSelect, initialGenre}) => {
     const [genres, setGenres] = useState([]);
-
-    const onSelect = (event) => {
-        const { target: { value } } = event;
-        setGenres(value);
-    };
+    useEffect(() => {
+        const initialGenreFiltered = listGenres.find((genres) => genres.name === initialGenre);
+        if(initialGenreFiltered) {
+            setGenres([initialGenre])
+        }
+    }, [initialGenre, listGenres]);
 
     return (
       <div className={'containerGenreSelect'}>
-          <div style={{}}>
+          <div className="subContainerGenreSelect">
               <label id="label-multiple-genres" className={'inputLabel'}>Genre</label>
               <FormControl sx={{ m: 1, width: '100%' }}>
                   <Select
@@ -32,7 +33,7 @@ export const GenreSelect = ({listGenres}) => {
                       id="multiple-genres"
                       multiple
                       value={genres}
-                      onChange={onSelect}
+                      onChange={(e) => onSelect(e, setGenres)}
                       renderValue={(selected) => selected.join(', ') || 'Select genre'}
                       MenuProps={MenuProps}
                       displayEmpty

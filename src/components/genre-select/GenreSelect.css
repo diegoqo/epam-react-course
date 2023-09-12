@@ -34,13 +34,13 @@
   label {
       color: white;
   }
-.menuItemGenre {
-    color: #FFF !important;
-    font-family: Montserrat !important;
-    font-size: 20px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: normal !important;
+.MuiMenu-list li {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 label#input-multiple-genres {
@@ -48,10 +48,6 @@ label#input-multiple-genres {
 } :focus {
     border-color: transparent;
   }
-
-fieldset.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
-    border-color: transparent !important;
-}
 
 svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon{
     color: #F65261;
