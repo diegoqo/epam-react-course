@@ -36,16 +36,4 @@ describe('Tests SearchForm component', () => {
             expect(mockOnSearch).toBeCalledWith({value: 'buttonSearch'})
         })
     })
-
-
-    /* fireEvent.keyDown(domNode, {key: 'Enter', code: 'Enter', charCode: 13}) */
-    /*it('should select the Documentary option and call the onSelect function', async () => {
-        const onSelectTest = jest.fn();
-        render(<GenreSelect listGenres={listGenres} onSelect={onSelectTest}/>)
-        fireEvent.click(screen.getByRole("button"))
-        waitFor(() => {
-            fireEvent.click(screen.getByRole("listbox", {name: 'Documentary'}))
-            expect(onSelectTest).toHaveBeenCalledTimes(1)
-        }).then(() => expect(screen.getByText('Documentary')).toBeTruthy());
-    })*/
 })

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './GenreSelect.css';
 import { Checkbox, FormControl, ListItemText, MenuItem, Select } from "@mui/material";
+import PropTypes from "prop-types";
 
 const ITEM_HEIGHT = 58;
 const ITEM_PADDING_TOP = 8;
@@ -53,3 +54,20 @@ export const GenreSelect = ({listGenres, onSelect, initialGenre}) => {
       </div>
   )
 }
+
+GenreSelect.propTypes = {
+    /**
+     * Is this the list of the genres to render
+     */
+    listGenres: PropTypes.array,
+    /**
+     * Is this the function for the on changed
+     */
+    onSelect: PropTypes.func,
+    /**
+     * Is this the initial value in the component
+     */
+    initialGenre: PropTypes.string
+}
+
+

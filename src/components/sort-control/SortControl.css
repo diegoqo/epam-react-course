@@ -1,0 +1,33 @@
+.containerSortControl {
+    background: #232323;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.labelSortControl {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.889px;
+    text-transform: uppercase;
+    opacity: 0.6027;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border: none;
+}
+.MuiSelect-select {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.889px;
+    text-transform: uppercase;
+}

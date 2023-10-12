@@ -1,0 +1,80 @@
+.containerMovieDetails {
+  display: flex;
+  background: #232323;
+  padding: 30px;
+  font-family: Montserrat;
+}
+
+.imgMovieDetails {
+  width: 324px;
+  height: 486px;
+}
+
+.containerRightMovieDetails {
+  padding-left: 60px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerTitleMovieDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.titleMovieDetails {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.scoreMovieDetails {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+.genresMovieDetails {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.containerYearHourMovieDetail {
+  display: flex;
+  color: #F65261;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  gap: 10px;
+}
+
+.descriptionMovieDetails {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.5;
+}
