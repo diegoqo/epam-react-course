@@ -1,7 +1,8 @@
 import './SearchForm.css';
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-export const SearchForm = ({initialQuery = '', onSearch}) => {
+export const SearchForm = ({initialQuery, onSearch}) => {
     const [inputValue, setInputValue] = useState(initialQuery);
 
     const handleChange = (e) => {
@@ -31,3 +32,20 @@ export const SearchForm = ({initialQuery = '', onSearch}) => {
         </div>
     )
 }
+
+SearchForm.propTypes = {
+    /**
+     * Is this the initial query
+     */
+    initialQuery: PropTypes.string,
+    /**
+     * Is this the funtion for execute to on change
+     */
+    onSearch: PropTypes.func,
+}
+
+SearchForm.defaultProps = {
+    initialQuery: ''
+}
+
+
